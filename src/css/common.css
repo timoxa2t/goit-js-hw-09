@@ -16,3 +16,15 @@ img {
   display: block;
   max-width: 100%;
 }
+
+[data-days],
+[data-hours],
+[data-minutes],
+[data-seconds] {
+  font-size: 50px;
+  display: inline-block;
+}
+
+.field{
+  display: inline-block;
+}
