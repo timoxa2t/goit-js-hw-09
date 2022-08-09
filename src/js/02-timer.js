@@ -60,6 +60,7 @@ function updateTimer(){
     if(dateDif < 1000){
         clearInterval(intervalId)
         Notiflix.Notify.success('Час вийшов');
+        startBtn.toggleAttribute("disabled")
     }
     const { days, hours, minutes, seconds } = convertMs(dateDif)
     daysEl.textContent = addLeadingZero(days)
@@ -69,5 +70,6 @@ function updateTimer(){
 }
 
 startBtn.addEventListener("click", () => {
+    startBtn.toggleAttribute("disabled")
     intervalId = setInterval(updateTimer, 1000)
 })
